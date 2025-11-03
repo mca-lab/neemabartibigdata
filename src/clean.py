@@ -1,4 +1,4 @@
-from pyspark.sql import SparkSession
+from pyspark.sql import SparkSessio
 
 spark = SparkSession.builder \
     .appName("GDP_Population_Cleaning") \
