@@ -1,18 +1,24 @@
-FROM python:3.12-slim
+# Use Ubuntu-based JDK (supports apt-get)
+FROM eclipse-temurin:21-jdk-jammy
 
+# Install Python + pip
+RUN apt-get update && apt-get install -y python3 python3-pip && \
+    pip3 install --no-cache-dir pyspark requests
+
+# Set working directory
 WORKDIR /app
 
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends openjdk-21-jdk-headless && \
-    rm -rf /var/lib/apt/lists/*
-
-
-ENV JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
-ENV PATH="$JAVA_HOME/bin:$PATH"
-
+# Install dependencies (if you have any)
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt || true
 
-COPY src/ .
+# Copy your source code
+COPY src/ /app/src/
 
-CMD ["python", "main.py"]
+# Default command: RUN CLEAN SCRIPT
+CMD ["python3", "src/clean.py"]
+
+
+
+
+

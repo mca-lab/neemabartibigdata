@@ -4,4 +4,6 @@
 data/processed/*
 data/raw/*
 
+.venv
+
 src/__pycache__

@@ -1,10 +1,10 @@
-# Big Data Project Template
+#  Project Title : Integrating and Visualizing World Bank Data for Global Economic Insights
 
 ## Project Overview
 Build a Big Data project using Python, PySpark and Docker. The workflow includes:
 
-1. Data ingestion from multiple sources
-2. Data cleaning and integration
+1. Data ingestion from  world bank which includes two files 1-gdp.csv 2-population.csv 
+2. Data cleaning  using pyspark and Docker environment
 3. Analysis and visualization
 4. Reproducible Docker-based setup for data collection and processing
 
@@ -18,10 +18,9 @@ pick **2 or more datasets**, define a **research question or hypothesis** and im
 **Objective:** Automate downloading datasets and storing them for processing.
 
 **Tasks:**
-- Choose 2+ public datasets (Kaggle, Data.gov, WHO, World Bank, UCI, etc.)
-- Write Python script to fetch datasets dynamically (URLs, APIs, Kaggle datasets)
+- Choose 2 public datasets (World Bank)
+- Write Python script to fetch datasets dynamically ( Kaggle datasets)
 - Store raw datasets in `data/raw/`
-- Optional: convert datasets to Parquet for efficient storage
 - Docker container ensures uniform data collection environment
 
 **Deliverables:**
