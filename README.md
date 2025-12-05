@@ -1,112 +1,95 @@
-#  Project Title : Integrating and Visualizing World Bank Data for Global Economic Insights
+# 🌍 Integrating and Visualizing World Bank Data for Global Economic Insights
 
-## Project Overview
-Build a Big Data project using Python, PySpark and Docker. The workflow includes:
-
-1. Data ingestion from  world bank which includes two files 1-gdp.csv 2-population.csv 
-2. Data cleaning  using pyspark and Docker environment
-3. Analysis and visualization
-4. Reproducible Docker-based setup for data collection and processing
-
-pick **2 or more datasets**, define a **research question or hypothesis** and implement the pipeline.
+A complete Big Data pipeline built using **Python**, **PySpark**, and **Docker**, designed to automate the ingestion, cleaning, integration, and analysis of global economic datasets such as **GDP** and **Population** from the **World Bank**.
 
 ---
 
-## Project Workflow
+# 🚀 Project Overview
+This project demonstrates:
 
-### Module 1. Data Collection & Ingestion
-**Objective:** Automate downloading datasets and storing them for processing.
+- Automated data ingestion (World Bank datasets)
+- Distributed data cleaning using PySpark in Docker
+- Analysis & visualization in Jupyter Notebook
+- A fully reproducible, containerized workflow
 
-**Tasks:**
-- Choose 2 public datasets (World Bank)
-- Write Python script to fetch datasets dynamically ( Kaggle datasets)
-- Store raw datasets in `data/raw/`
-- Docker container ensures uniform data collection environment
-
-**Deliverables:**
-- `Dockerfile` + `requirements.txt`
-- Scripts in `src/` (e.g., `fetch_data.py`)
-- `data/raw/` populated when container runs
+You must select **2 or more datasets**, define a **research question**, and implement the full pipeline.
 
 ---
 
-### Module 2. Data Cleaning & Integration
-**Objective:** Prepare raw data for analysis using PySpark.
+# 🔧 Project Workflow
 
-**Tasks:**
-- Load raw datasets into PySpark
-- Handle missing values, inconsistent formats, duplicates
-- Merge, join or aggregate datasets as required
-- Store processed data in `data/processed/`
-- Docker container ensures reproducible cleaning pipeline
+## 📍 Module 1 — Data Collection & Ingestion
+**Objective:** Automatically download datasets in a controlled environment.
 
-**Deliverables:**
-- `Dockerfile` + `requirements.txt` for cleaning
-- Scripts in `src/` (e.g., `clean_data.py`)
-- `data/processed/` ready for analysis
+### Tasks
+- Select 2 World Bank datasets  
+- Create `fetch_data.py` to download CSV files  
+- Store them in `data/raw/`  
+- Use Docker for reproducibility  
 
----
-
-### Module 3. Data Analysis & Visualization
-**Objective:** Explore and analyze cleaned datasets to answer the research question.
-
-**Tasks:**
-- Load processed data in Jupyter Notebook
-- Perform descriptive statistics, correlations, aggregations or regression or other appropiate analysis methods
-- Visualize using Matplotlib, Seaborn or Plotly
-- Document findings and interpretations in notebook cells
-
-**Deliverables:**
-- Jupyter Notebook(s) in `/notebooks/`
-- Plots and charts illustrating key insights
-- Problem statement, explanation and conclusion in the README.md
+### Deliverables
+- `Dockerfile` + `requirements.txt`  
+- `src/fetch_data.py`  
+- Raw datasets inside `data/raw/`  
 
 ---
 
-## Technologies
-- Python
-- PySpark
-- Matplotlib, Seaborn, Plotly
-- Docker
+## 📍 Module 2 — Data Cleaning & Integration (PySpark)
+**Objective:** Prepare datasets for analysis.
+
+### Tasks
+- Load datasets using PySpark  
+- Handle missing values, duplicates, incorrect formats  
+- Join/merge GDP + Population datasets  
+- Store cleaned files in `data/processed/`  
+
+### Deliverables
+- `Dockerfile` + `requirements.txt`  
+- `src/clean_data.py`  
+- Processed data in `data/processed/`  
 
 ---
 
-## Notes
-- Module 1 and Module 2 require Docker for reproducibility
-- Module 3 is executed in Jupyter Notebook (no Docker required)
-- End goal: automated pipeline from data fetching → cleaning → analysis → insights
+## 📍 Module 3 — Analysis & Visualization (Jupyter Notebook)
+**Objective:** Explore the cleaned data to answer the research question.
 
-## Git Configuration
-- Use `.gitignore` file to prevent large or sensitive files, cache files and any other unnecessary files and folders from being committed.
-- Do not commit raw or processed datasets to the repository.
-- Do not commit python cache files, notebook checkpoints, virtual environments
-- Only commit scripts, notebooks, Docker setup and README.
-- Do not commit raw or processed datasets to the repository.
-- Only commit scripts, notebooks, Docker setup and README.
+### Tasks
+- Load processed data  
+- Perform descriptive statistics, correlations, or regression  
+- Visualize with Matplotlib, Seaborn, Plotly  
+- Document findings and conclusions  
+
+### Deliverables
+- `notebooks/analysis.ipynb`  
+- Visual charts and graphs  
+- README: problem statement, explanation, conclusion  
 
 ---
 
-## To Get Started
+# 🛠️ Technologies Used
+- Python 3  
+- PySpark  
+- Docker  
+- Matplotlib / Seaborn / Plotly  
+- Jupyter Notebook  
 
-1. **Fork the Template**:
-   - Click **Use this template → Create a new repository**.
-   - Select the organization namespace for the forked repository.
+---
 
-2. **Clone Your Repository**:
-   ```bash
-   git clone https://github.com/<your-username>/<your-repo>.git
-   cd <your-repo> 
-   ```
-3. **Work Locally**:
-	- Implement data fetching, cleaning and analysis in your forked repo.
-	- Commit and push changes to your repository
+# 📁 Repository Structure
 
-4. **(optional) Pull Updates from Template (if updated)**:
-	- Add the template repository as an upstream remote:
-
-	```bash
-	git remote add upstream https://github.com/<org-name>/big-data-template.git
-	git fetch upstream
-	git merge upstream/main
-	```
+project/
+│── data/
+│ ├── raw/
+│ └── processed/
+│── src/
+│ ├── fetch_data.py
+│ └── clean_data.py
+│── notebooks/
+│ └── analysis.ipynb
+│── docker/
+│ ├── Dockerfile.ingest
+│ └── Dockerfile.clean
+│── requirements.txt
+│── .gitignore
+│── README.md
 
