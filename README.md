@@ -77,7 +77,8 @@ You must select **2 or more datasets**, define a **research question**, and impl
 
 # 📁 Repository Structure
 
-```project/
+```
+project/
 │── data/
 │ ├── raw/
 │ └── processed/
