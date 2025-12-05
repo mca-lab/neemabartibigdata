@@ -81,15 +81,21 @@ project/
 │── data/
 │ ├── raw/
 │ └── processed/
+|
 │── src/
 │ ├── fetch_data.py
 │ └── clean_data.py
+|
 │── notebooks/
 │ └── analysis.ipynb
+|
 │── docker/
 │ ├── Dockerfile.ingest
 │ └── Dockerfile.clean
+|
 │── requirements.txt
+|
 │── .gitignore
+|
 │── README.md
 
