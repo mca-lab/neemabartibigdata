@@ -1,9 +1,0 @@
-*.Rhistory
-.DS_Store
-
-data/processed/*
-data/raw/*
-
-.venv
-
-src/__pycache__
